@@ -1,14 +1,20 @@
-Static Government Web Template 2.0
+Static Government Web Template P2
 
 Notes:
 * no notes yet
 
 ###### Future updates:
-- no future updates yet
+- Foundation 6
+- New PST Widget
+- Sticky Menu
 
 Known Bugs:
 - No known bugs yet
 
 ###### CHANGE LOGS
+**2016-03-04**
+- Added PST and Transparency Seal
+- Rebranding to GWT-static P2
+
 **2015-05-13**
 - New version of the static template
