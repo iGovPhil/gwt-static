@@ -4,58 +4,175 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GOVPH | GWT Static</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-	<link rel="stylesheet" href="css/responsiveslides.css">
-	<link rel="stylesheet" href="css/responsiveslides_more.css">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/foundation/foundation.css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+    
+    <link rel="stylesheet" href="theme.css"/>
   </head>
   <body>
 
-<!-- top bar navigation -->
-    <div id="main-nav">
-      <div class="row">
-        <div class="large-12 columns">
-          <nav class="top-bar" data-topbar>
-            <ul class="title-area">
-              <li class="name">
-                <h1><a href="#">GOVPH</a></h1>
+    <!-- <input id="tmp-link" type="hidden" data-link=""> -->
+
+    <div id="a11y-modal" class="large reveal" data-reveal title="Accessibility Statement" role="dialog">
+        <textarea class="statement-textarea" readonly rows="20">
+    Shortcut Keys Combination Activation Combination keys used for each browser. 
+      
+      Chrome for Linux press (Alt+Shift+shortcut_key) 
+      Chrome for Windows press (Alt+shortcut_key) 
+      For Firefox press (Alt+Shift+shortcut_key) 
+      For Internet Explorer press (Alt+Shift+shortcut_key) then press (enter) 
+      Accessibility Statement (Combination + 0): 
+      
+    Statement page that will show the available accessibility keys. 
+      
+        Home Page (Combination + 1): Accessibility key for redirecting to homepage. 
+        Main Content (Combination + R): Shortcut for viewing the content section of the current page. 
+        FAQ (Combination + 5): Shortcut for FAQ page. 
+        Contact (Combination + C): Shortcut for contact page or form inquiries. 
+        Feedback (Combination + K): Shortcut for feedback page. 
+        Site Map (Combination + M): Shortcut for site map (footer agency) section of the page. 
+        Search (Combination + S): Shortcut for search page. 
+      
+    Press esc, or click the close the button to close this dialog box.
+        </textarea>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+
+  <!-- Start of Off Canvas -->
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+  
+  <!-- Off Canvas Menu -->
+          <div id="offCanvasRight" class="off-canvas position-right hide-for-large" data-off-canvas data-position="right">
+            
+            <ul class="vertical menu" data-drilldown data-parent-link="true">
+                
+              <li><a href="#">Home</a></li>
+              <li class="has-dropdown">
+                <a href="#">Transparency</a>
+                <ul class="vertical menu">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
               </li>
-              <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+              <li><a href="#">Left Nav Button</a></li>
+
+              <li class="active"><a href="#">Right Button Active</a></li>
+              <li>
+                <a href="#">Right Button Dropdown</a>
+                <ul class="vertical menu">
+                  <li><a href="#">1st link in dropdown</a></li>
+                  <li><a href="#">2nd link in dropdown</a></li>
+                  <li><a href="#">3rd link in dropdown</a></li>
+                </ul>
+              </li>
+
             </ul>
+          </div>
 
-            <section class="top-bar-section">
-              <!-- Right Nav Section -->
-              <ul class="right">
-                <li class="active"><a href="#">Right Button Active</a></li>
-                <li class="has-dropdown">
-                  <a href="#">Right Button Dropdown</a>
-                  <ul class="dropdown">
-                    <li><a href="#">1st link in dropdown</a></li>
-					<li><a href="#">2nd link in dropdown</a></li>
-					<li><a href="#">3rd link in dropdown</a></li>
-                  </ul>
-                </li>
-              </ul>
+        <div class="off-canvas-content" data-off-canvas-content>
 
-              <!-- Left Nav Section -->
-              <ul class="left">
-                <li class="divider"></li>
-                <li><a href="#">Home</a></li>
-                <li class="divider"></li>
-                <li class="has-dropdown">
-                  <a href="#">Transparency</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
+          <div class="title-bar" data-responsive-toggle="gwt-menu" data-hide-for="large">
+            <div class="title-bar-left">
+              <a href="http://www.gov.ph"><h1 class="title-bar-title">GOVPH</h1></a>
+            </div>
+            <div class="title-bar-right">
+              <span class="title-bar-title">MENU</span>
+              <button id="me" type="button" data-open="offCanvasRight">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </button>  
+            </div>
+          </div>
+
+  <!-- Sticky Top Bar navigation -->
+    <div id="main-nav" class="show-for-large">
+      <div data-sticky-container>
+        <div class="sticky" data-sticky data-margin-top="0" style="width:100%;">
+
+          <div class="row">
+            <div class="large-12 columns">
+              <div id="gwt-menu" class="top-bar">
+
+                <nav class="top-bar-left">
+                  <ul class="dropdown menu" data-dropdown-menu>
+                    <li id="govph" class="name menu-text"><h1><a href="http://www.gov.ph">GOVPH</a></h1></li>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                      <a href="#">Transparency</a>
+                      <ul class="vertical menu">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Left Nav Button</a></li>
                   </ul>
-                </li>
-                <li class="divider"></li>
-                <li><a href="#">Left Nav Button</a></li>
-                <li class="divider"></li>                
-              </ul>
-            </section>
-          </nav>         
+                </nav>
+
+                <nav class="top-bar-right">
+                  <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="active"><a href="#">Right Button Active</a></li>
+                    <li>
+                      <a href="#">Right Button Dropdown</a>
+                      <ul class="vertical menu">
+                        <li><a href="#">1st link in dropdown</a></li>
+                        <li><a href="#">2nd link in dropdown</a></li>
+                        <li><a href="#">3rd link in dropdown</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <button id="acc-button" type="button">
+                        <span class="show-for-sr">Accessibility Button</span>
+                        <i class="fa fa-universal-access fa-2x" aria-hidden="true"></i>
+                      </button>
+                      
+                      <ul id="acc-widget" class="menu">
+                        <li>
+                          <a href="#" id="accessibility-statement" class="toggle-statement" data-toggle="a11y-modal" title="Accessibility Statement">
+                            <span class="show-for-sr">Accessibility Statement</span>
+                            <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" id="accessibility-contrast" class="toggle-contrast" title="Toggle High Contrast">
+                            <span class="show-for-sr">Toggle High Contrast</span>
+                            <i class="fa fa-low-vision fa-2x" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" id="accessibility-grayscale" class="toggle-grayscale" title="Toggle Gray Scale">
+                            <span class="show-for-sr">Toggle Gray Scale</span>
+                            <i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" id="stc" href="#" title="Skip to Content">
+                            <span class="show-for-sr">Skip to Content</span>
+                            <i class="fa fa-arrow-circle-o-down fa-2x" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" id="stf" href="#" title="Skip to Footer">
+                            <span class="show-for-sr">Skip to Footer</span>
+                            <i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </nav>
+
+              </div>         
+            </div>
+          </div>
+
         </div>
       </div>  
     </div>    
@@ -78,22 +195,30 @@
     <div id="banner">
       <div class="row">
         <div class="large-12 columns">
-          <div class="callbacks_container">
-            <ul class="rslides" id="slider_full">
-              <li>
+          <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+            <ul class="orbit-container" id="slider_full">
+
+                <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+
+              <li class="is-active orbit-slide">
                 <img src="http://placekitten.com/g/1280/400">
-                <p class="caption">Caption One.</p>
+                <figcaption class="orbit-caption">Caption One.</figcaption>
               </li>
-              <li>
+              <li class="orbit-slide">
                 <img src="http://www.kerzner.com/~/media/Kerzner/Images/Properties/Property%20Detail%20Secondary%201280x400/Le%20Saint%20Geran/le_saint_geran_mauritius_pool_beach_people2_1280x400.jpg?h=400&la=en&w=1280">
-                <p class="caption">Caption Two.</p>
+                <figcaption class="orbit-caption">Caption Two.</figcaption>
               </li>
-              <li>
+              <li class="orbit-slide">
                 <img src="http://www.kerzner.com/~/media/Kerzner/Images/Properties/Property%20Detail%20Secondary%201280x400/Le%20Saint%20Geran/le_saint_geran_mauritius_accommodation_pool_beach_people_1280x400.jpg?h=400&la=en&w=1280">
-                <p class="caption">Caption Three.</p>
+                <figcaption class="orbit-caption">Caption Three.</figcaption>
               </li>
             </ul>
-
+              <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+              </nav>
           </div>
         </div>
       </div>
@@ -106,28 +231,30 @@
         <div class="large-12 columns">
           <div class="row collapse bg-banner">
             <div class="large-8 columns">
-              <div class="callbacks-container">
-                <ul class="rslides" id="slider_fourth">
-                  <li>
+              
+              <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+                <ul class="orbit-container" id="slider_full">
+                    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+
+                  <li class="is-active orbit-slide">
                     <img src="http://placekitten.com/g/840/400">
-                    <p class="caption">
-                      Caption One.
-                    </p>
+                    <figcaption class="orbit-caption">Caption One.</figcaption>
                   </li>
-                  <li>
+                  <li class="orbit-slide">
                     <img src="http://www.aratuonline.com.br/wp-content/uploads/2015/03/aratuonline-cultura-exposicao-fotografica-aguas-840x4001-840x400.jpg">
-                    <p class="caption">
-                      Caption Two.
-                    </p>
+                    <figcaption class="orbit-caption">Caption Two.</figcaption>
                   </li>
-                  <li>
+                  <li class="orbit-slide">
                     <img src="http://ovie.metronetsa.net/wordpress/wp-content/uploads/2014/04/15442-840x400.jpg">
-                    <p class="caption">
-                      Caption Three.
-                    </p>
+                    <figcaption class="orbit-caption">Caption Three.</figcaption>
                   </li>
                 </ul>
-
+                  <nav class="orbit-bullets">
+                    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                  </nav>
               </div>
             </div>
             <div class="large-4 columns">
@@ -144,11 +271,11 @@
 <!-- banner 3/4 width end --> 
 
 <!-- main -->
-    <div id="main">
+    <div id="main-content">
 
       <div class="row">
         <div class="large-12 columns">
-          <div class="panel">
+          <div class="callout secondary">
             <h3>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</h3>
 
             <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
@@ -172,20 +299,17 @@
         <div class="large-8 medium-8 columns">
           <h5>Here&rsquo;s your basic grid:</h5>
           <!-- Grid Example -->
-
           <div class="row">
             <div class="large-12 columns">
-              <div class="callout panel">
+              <div class="callout primary">
                 <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
               </div>
             </div>
           </div>
-
-
         </div>     
 
         <div class="large-4 medium-4 columns">
-          <div class="panel">
+          <div class="callout secondary">
             <h5>Widget</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
             <a href="#" class="small button">Call to action</a>          
@@ -195,7 +319,7 @@
 
       <div class="row">
         <div class="large-3 medium-3 columns">
-          <div class="panel">
+          <div class="callout secondary">
             <div id="transparency" class="text-center">
               <h4>Transparency Seal</h4>
               <a href="#">
@@ -205,21 +329,39 @@
           </div>
         </div>
         <div class="large-6 medium-6 columns">
-          <div class="panel">
+          <div class="callout secondary">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non velit vel risus tempor aliquet ut vel risus. Ut id ligula sed nulla mattis efficitur a in augue. Nam non ipsum augue. Aliquam tellus orci, molestie in vehicula non, suscipit nec diam. Aliquam in dignissim justo. Maecenas malesuada pulvinar felis, eget efficitur erat varius quis.</p> 
             <p>Morbi eget vestibulum nunc, nec egestas est. Morbi vestibulum purus vel sem accumsan cursus. Sed condimentum mauris nibh. Aliquam euismod a massa sodales posuere. Fusce id ultricies ipsum. Vivamus viverra lectus vitae eros congue, a tempus purus efficitur. Nulla imperdiet dolor quis sollicitudin rutrum. In commodo purus turpis, vitae sagittis eros lacinia vel.</p>
           </div>
         </div>
         <div class="large-3 medium-3 columns">
-          <div class="panel">
+          <div class="callout secondary">
             <div id="pst" class="text-center">
-              <h4>Philippine Standard Time</h4>
-              <div id="npst">
-                <a href="#">
-                  <iframe src="http://oras.pagasa.dost.gov.ph/time_display/time/" allowtransparency="true" scrolling="no" frameborder="0" height="30px" width="100%"></iframe>
-                </a>
-            </div>
-            </div>
+
+              <div id="pst-container" style="display:block; text-align:<?php echo $pst_align; ?>;">
+                <div style="font-style:Roboto; color:#333;">
+                  <div style="font-size:1rem;"><b>Philippine Standard Time</b></div>
+                  <div style="font-size:0.875rem;">
+                    <span id="pst-date"></span>
+                    <span id="pst-time"></span>
+                  </div>
+                </div>
+              </div>
+
+              <script type="text/javascript" id="gwt-pst">
+              (function(d, eId) {
+                var js, gjs = d.getElementById(eId);
+                js = d.createElement("script"); js.id = "gwt-pst-jsdk";
+                js.src = "//gwhs.i.gov.ph/pst/gwtpst.js?"+new Date().getTime();
+                gjs.parentNode.insertBefore(js, gjs);
+              }(document, "gwt-pst"));
+
+              var gwtpstReady = function(){
+                var otherFormat = "dddd, mmmm dd, yyyy h:mm:ss TT";
+                var firstPst = new gwtpstTime("pst-date", {format: otherFormat});
+              }
+              </script>
+
           </div>
         </div>
       </div>
@@ -230,6 +372,14 @@
 
 <!--Standard Footer-->
 <div id="gwt-standard-footer"></div>
+
+<div><a href="#main-nav" id="back-to-top" title="Back to Top"><i class="fa fa-arrow-circle-up fa-3x" aria-hidden="true"></i>
+
+      </div><!-- off-canvas-content -->
+    </div><!-- off-canvas-wrapper-inner -->
+  </div><!-- off-canvas-wrapper -->
+
+
 
     <script type="text/javascript">
       (function(d, s, id) {
@@ -242,31 +392,13 @@
     </script>
 <!--Standard Footer End-->
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/responsiveslides.js"></script>
+    <script src="js/foundation/vendor/jquery.js"></script>
+    <script src="js/foundation/vendor/foundation.min.js"></script>
+    <script src="js/foundation/vendor/what-input.js"></script>
+    <script src="js/theme.js"></script>
 
     <script>
       $(document).foundation();
-    </script>
-
-    <script>
-    	$("#slider_full").responsiveSlides({
-    		auto: true,
-    		pager: true,
-    		nav: true,
-    		speed: 500,
-    		namespace: "callbacks",
-    	});
-
-    	$("#slider_fourth").responsiveSlides({
-    		auto: true,
-    		pager: true,
-    		nav: true,
-    		speed: 500,
-    		namespace: "callbacks",
-    	});
     </script>
 
 	</body>
