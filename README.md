@@ -1,4 +1,4 @@
-Static Government Web Template P2
+Static Government Web Template version 25.0
 
 Notes:
 * no notes yet
